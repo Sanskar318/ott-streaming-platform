@@ -1,1 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
 
+<h2 id="title"></h2>
+
+<video id="player" controls width="100%"></video>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const url = params.get("url");
+const title = params.get("title");
+
+document.getElementById("title").innerText = title;
+document.getElementById("player").src = url;
+</script>
+
+</body>
+</html>
